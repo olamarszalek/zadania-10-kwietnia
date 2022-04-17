@@ -1,0 +1,28 @@
+@mixin ButtonNameMixin {
+    display: inline-block;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: $button-border-color;
+    background-color: white;
+    width: 200px;
+    padding: 10px 10px;
+    text-align: center;
+    padding: 15px 15px;
+
+}
+
+@mixin main-navNameMixin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $nav-background-color;
+    font-family: $font-family-1;
+}
+
+@mixin hrNameMixin {
+    width: 150px;
+    background-color: $button-border-color;
+    border: 0;
+    height: 2px;
+}

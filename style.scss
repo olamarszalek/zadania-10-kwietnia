@@ -1,0 +1,165 @@
+@import './tokens';
+
+@import './mixin';
+
+.main-nav {
+    @include main-navNameMixin;
+
+    ul {
+        height: 100%;
+        padding-inline-start: 0px;
+    }
+
+    .li-nav {
+
+        text-align: center;
+        display: inline-block;
+        width: 33%;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-family: $font-family-1;
+            color: white;
+            margin: 0 auto;
+
+        }
+    }
+}
+
+header {
+    margin-top: 100px;
+    font-family: $font-family-1;
+    text-align: center;
+    color: $font-color_1;
+
+    .header-img {
+        text-align: center;
+
+        img {
+
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+
+    }
+
+
+    button {
+        @include ButtonNameMixin;
+    }
+}
+
+.portfolio {
+    margin: auto 20px;
+    font-family: $font-family-1;
+    text-align: center;
+    color: $font-color_1;
+}
+
+.portfolio-dark {
+    background-color: rgb(247, 239, 229);
+}
+
+.portfolio-h3 {
+    margin-top: 50px;
+    padding-top: 100px;
+
+    hr {
+        @include hrNameMixin;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 50px;
+}
+
+.portfolio-image {
+    img {
+        width: 100%;
+        height: auto;
+        transition: transform .3s;
+        :hover {
+            transform: scale(1.3);/*ten efekt nie działa, nie wiem, jak go naprawić*/
+        }
+    }
+}
+
+
+
+.kontakt {
+    font-family: $font-family-1;
+    color: $font-color_1;
+    text-align: center;
+
+    hr {
+        @include hrNameMixin;
+    }
+
+    label {
+        display: none;
+    }
+
+    fieldset {
+        border: 0;
+
+        .kontakt-input {
+            display: inline-block;
+            width: 40%;
+            margin-bottom: 10px;
+
+            .input-name {
+                border: 1px solid $font-color_1;
+                border-radius: 0%;
+                font-family: $font-family-1;
+                width: 90%;
+
+            }
+        }
+
+        .kontakt-textarea {
+            display: inline-block;
+            width: 80%;
+
+            /* Mam problem z dopasowaniem szerokości inputów i textarea, czy mógłbyś podpowiedzieć?*/
+            textarea {
+                font-family: $font-family-1;
+                width: 100%;
+                border-radius: 0%;
+            }
+
+        }
+
+    }
+
+    button {
+        @include ButtonNameMixin;
+    }
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+
+
+    .footer-font {
+        text-align: center;
+        display: inline-block;
+        width: 75px;
+        margin: auto;
+
+        a {
+            font-size: 20px;
+            color: $button-border-color;
+            transition: 1s;
+
+            :hover {
+                color: rgb(97, 22, 92);
+            }
+        }
+    }
+}
